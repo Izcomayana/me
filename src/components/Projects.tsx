@@ -3,6 +3,8 @@ import dogped from "../../public/dogped.jpg";
 import zuri from "../../public/zuri.jpg";
 import catchup from "../../public/catchup.jpg";
 import mentorshub from "../../public/mentorshub.jpg";
+import { useEffect } from "react";
+import AOS from 'aos';
 
 const projects = [
   {
@@ -58,6 +60,10 @@ const projects = [
 ];
 
 const Projects = () => {
+    useEffect(() => {
+      AOS.init();
+    }, []);
+    
   return (
     <>
       <div className="my-20">
@@ -68,7 +74,8 @@ const Projects = () => {
         </p>
         <div className="my-10 flex flex-col justify-center items-center">
           {projects.map((project, index) => (
-            <div key={index} className="project dark:text-[#bbbbbb] lg:w-7/12">
+            <div key={index} data-aos="fade-up"
+            data-aos-duration="2000" className="project dark:text-[#bbbbbb] lg:w-7/12">
               <div className="h-64 lg:h-[26rem]">
                 <img
                   src={project.img}
