@@ -5,7 +5,7 @@ import Projects from "./components/Projects";
 
 // // importing aos
 import AOS from 'aos';
-// import 'aos/dist/aos.css';
+import 'aos/dist/aos.css';
 
 // images
 import me from "../public/me.svg";
