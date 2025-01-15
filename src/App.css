@@ -1,0 +1,98 @@
+@layer utilities {
+  .scrollbar::-webkit-scrollbar {
+    width: 15px;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background: transparent;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(215, 171, 38, 0.8);
+    border-radius: 100vh;
+    border: 2px solid rgba(0, 0, 0, 0.156);
+    height: 7.5rem;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(215, 170, 38, 0.859);
+  }
+}
+
+body {
+  margin: 0;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+p {
+  font-size: 0.8rem;
+  line-height: 2;
+}
+
+h2 {
+  color: #d7aa26db;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-decoration: underline;
+  margin-bottom: 0.75rem;
+}
+
+
+.project {
+  border: 1px solid #d7aa26db;
+  margin-bottom: 8rem;
+  padding-bottom: 3rem;
+  position: relative;
+}
+
+.project::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(215, 171, 38, 0.15);
+  border-radius: 5px 5px 0 0;
+  transition: 250ms ease-in;
+}
+
+.project:hover::after {
+  background-color: rgba(0, 0, 0, 0);
+  transition: 250ms ease-in;
+}
+
+
+
+.project img {
+  object-fit: cover;
+  border-radius: 25px;
+  margin-bottom: 2rem;
+  /* max-width: 768px;
+  max-height: 128px; */
+}
+
+
+.project h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+@media (min-width:640px) {
+  .project h3 {
+    font-size: 1.5rem;
+  }
+}
+
+.project p {
+  margin: 0.5rem 0;
+}
+
+.project a {
+  font-weight: 500;
+  text-decoration: underline;
+  z-index: 1;
+  position: relative;
+}
