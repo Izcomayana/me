@@ -134,9 +134,23 @@ function App() {
 
                 <Projects />
               </div>
+              <div className="w-fit mx-auto">
+                <p className="dark:text-[#bbbbbb] pb-10 sm:text-lg">
+                  <a
+                    href="https://github.com/izcomayana"
+                    className="hover:underline"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    There's more on github...
+                  </a>
+                </p>
+              </div>
             </main>
+          </div>
+        </div>
 
-            <footer className="bg-[#daa520] text-white p-10 sm:p-14">
+        <footer className="bg-[#daa520] text-white p-10 sm:p-14">
               <h2 className="text-white text-2xl sm:text-4xl">
                 Friends now🤝🏽?
               </h2>
@@ -157,13 +171,11 @@ function App() {
               <br /> <br />
               <a
                 href="tel:+2348036567514"
-                className="hover:text-yellow hover:bg-white transition-all duration-200 tel mt-13 rounded border-[1px] border-white mt-3 p-1 sm:text-lg"
+                className="hover:text-[#daa520] hover:bg-gray-100 hover:border-[#daa520] transition-all duration-200 tel mt-13 rounded border-[1px] border-white mt-3 p-1 sm:text-lg"
               >
                 08036567514
               </a>
             </footer>
-          </div>
-        </div>
       </div>
     </>
   );

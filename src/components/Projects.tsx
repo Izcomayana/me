@@ -1,31 +1,30 @@
 import preNetflix from "../../public/pre-netflix.jpg";
 import dogped from "../../public/dogped.jpg";
-import zuri from "../../public/zuri.jpg";
-import catchup from "../../public/catchup.jpg";
 import mentorshub from "../../public/mentorshub.jpg";
+import rewardsumm from "../../public/rewardsumm.jpg";
 import { useEffect } from "react";
 import AOS from 'aos';
 
 const projects = [
   {
-    img: zuri,
-    alt: "Zuri Chat",
-    title: "Zuri Chat",
+    img: mentorshub,
+    alt: "MentorsHub",
+    title: "MentorsHub",
     description:
-      "Zuri Chat is a very flexible open-source messaging app for organizations connecting members to information they need whenever they need them.",
-    tools: ["react", "redux", "bootstrap", "nodejs"],
-    liveLink: "https://www.zuri.chat/",
-    githubLink: "https://github.com/zurichat/zc_main",
+      "A platform that offers personalized mentorship experiences, real-world insights, and skill development opportunities.",
+    tools: ["next", "typescript", "shadcdn", "tailwind"],
+    liveLink: "https://mentorshub.io/",
+    githubLink: "https://github.com/proostack/mentored-client",
   },
   {
-    img: catchup,
-    alt: "CatchUp",
-    title: "CatchUp",
+    img: rewardsumm,
+    alt: "RewardsSumm",
+    title: "RewardSumm",
     description:
-      "CatchUp is an app for scheduling hangouts with friends and families.",
-    tools: ["react", "css", "tailwind"],
-    liveLink: "https://catchup.hng.tech/",
-    githubLink: "https://github.com/workshopapps/dinnerwithfriends.web",
+      "The focus of this task is to develop a Rewards Summary Page where customers can track their earnings, view their cashback history, and cash out their rewards, either directly or through promo codes.",
+    tools: ["react", "typescript", "tailwind", "radix-ui", "aos"],
+    liveLink: "https://rewardsumm.vercel.app/",
+    githubLink: "https://github.com/Izcomayana/balancee-rewards-summary",
   },
   {
     img: preNetflix,
@@ -47,16 +46,6 @@ const projects = [
     liveLink: "https://dogped.vercel.app/",
     githubLink: "https://github.com/AyoOluwa-Israel/dog_pedigree",
   },
-  {
-    img: mentorshub,
-    alt: "MentorsHub",
-    title: "MentorsHub",
-    description:
-      "A platform that offers personalized mentorship experiences, real-world insights, and skill development opportunities.",
-    tools: ["next", "typescript", "shadcdn", "tailwind"],
-    liveLink: "https://mentorshub.io/",
-    githubLink: "https://github.com/proostack/mentored-client",
-  },
 ];
 
 const Projects = () => {
@@ -66,17 +55,17 @@ const Projects = () => {
     
   return (
     <>
-      <div className="my-20">
+      <div className="mt-20">
         <h2 className="sm:text-3xl">What I've cooked so far 👨‍🍳</h2>
         <p className="dark:text-[#bbbbbb] sm:text-lg">
           I try my best to make the best “meals” and here are some delicious
           ones🍲...
         </p>
-        <div className="my-10 flex flex-col justify-center items-center">
+        <div className="mt-10 flex flex-col justify-center items-center">
           {projects.map((project, index) => (
             <div key={index} data-aos="fade-up"
-            data-aos-duration="2000" className="project dark:text-[#bbbbbb] lg:w-7/12">
-              <div className="h-64 lg:h-[26rem]">
+            data-aos-duration="2000" className="project dark:text-[#bbbbbb] w-full md:w-4/5 lg:w-7/12">
+              <div className="h-80 lg:h-[23rem]">
                 <img
                   src={project.img}
                   alt={project.alt}
@@ -94,7 +83,7 @@ const Projects = () => {
                 ))}
               </div>
               <h3>{project.title}</h3>
-              <p>{project.description}</p>
+              <p className="md:text-base">{project.description}</p>
               <a href={project.liveLink} target="_blank" rel="noreferrer">
                 Take a look👀
               </a>
